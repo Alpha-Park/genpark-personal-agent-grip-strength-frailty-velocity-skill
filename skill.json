@@ -1,0 +1,26 @@
+{
+  "name": "genpark-personal-agent-grip-strength-frailty-velocity-skill",
+  "version": "1.0.0",
+  "description": "Calculates isometric grip strength, relative grip strength (RGS), PURE all-cause mortality hazard ratios, bilateral asymmetry, and motor unit fatigue slope.",
+  "tools": [
+    {
+      "name": "evaluate_grip_strength_and_frailty",
+      "description": "Calculates relative grip strength (RGS), bilateral asymmetry, and PURE mortality hazard ratio.",
+      "parameters": {
+        "dominant_hand_kg": "float (default 48.0)",
+        "non_dominant_hand_kg": "float (default 44.0)",
+        "sex": "string (default 'male')",
+        "age": "int (default 42)",
+        "bodyweight_kg": "float (default 75.0)"
+      }
+    },
+    {
+      "name": "model_neuromuscular_fatigue_rate",
+      "description": "Evaluates neuromuscular motor unit fatigue slope across successive isometric trials.",
+      "parameters": {
+        "repeated_trials_json": "string (JSON array of trial numbers in kg)",
+        "trial_intervals_sec": "float (default 15.0)"
+      }
+    }
+  ]
+}
